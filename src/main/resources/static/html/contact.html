@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="Cosmetics website/logo.png" alt="Logo">
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                <input type="text" id="searchInput" placeholder="Search lipsticks...">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/html/home.html">Home</a></li>
+
+                <li class="shop-menu">
+                    <a href="#" class="shop-link">Shop</a>
+
+                    <div class="shop-dropdown">
+                        <h3>Category</h3>
+
+                        <a href="/html/eyemakeup.html" class="category-item">
+                            <span>Eye Makeup</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/fragrance.html" class="category-item">
+                            <span>Fragrance</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/haircare.html" class="category-item">
+                            <span>Hair Care</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/lipsticks.html" class="category-item">
+                            <span>Lipsticks</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/nails.html" class="category-item">
+                            <span>Nails</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/skincare.html" class="category-item">
+                            <span>Skincare</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </li>
+
+                <li><a href="/html/offers.html">Offers</a></li>
+                <li><a href="/html/about.html">About</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+            </ul>
+
+            <div class="icons">
+                <div class="icon">
+                    <a href="/html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+
+                <div class="icon">
+                    <a href="/html/wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                </div>
+
+                <div class="user-menu">
+                    <a href="/html/login.html" id="userLink">
+                        <span class="user-icon">
+                        <i class="fa-regular fa-user"></i>
+                        </span>
+
+                        <span id="navbarUsername"></span>
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="content">
+            <h5>Get In Touch</h5>
+            <p>
+                Whether you have a question about our formulas or our recent order, our beauty experts are here to help.
+            </p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+            <h2>Send a Message</h2>
+
+            <form>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="e.g Narmatha">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email Id</label>
+                        <input type="email" id="email" placeholder="nar@gmail.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="mobile">Mobile No</label>
+                        <input type="tel" id="mobile" placeholder="+91 98765 43210">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="How can we help?">
+                    </div>
+                </div>
+
+                <div class="input-group message-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" placeholder="Write your message here..."></textarea>
+                </div>
+
+                <button type="submit" class="send-message-btn">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+        <!-- Customer Services -->
+        <div class="customer-service-card">
+            <h2>Customer Services</h2>
+
+            <div class="service-info">
+                <div class="service-icon email-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+                    <h3>Email Us</h3>
+                    <p>supportglowify@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="service-info">
+                <div class="service-icon phone-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div>
+                    <h3>Call Us</h3>
+                    <p>+91-1234567890</p>
+                    <p>+91-9876543210</p>
+                </div>
+            </div>
+
+            <div class="service-actions">
+                <a href="/html/trackorder.html" class="order-action">
+                    <span>Track You Order</span>
+                    <span class="arrow-circle">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                </a>
+
+                <a href="/html/cancelorder.html" class="order-action">
+                    <span>Cancel Order</span>
+                    <span class="arrow-circle">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+
+        <details class="faq-item">
+            <summary>
+                <span>1. Is Cream Luxe Finish lipstick long-lasting?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </summary>
+            <p>
+                Yes. Cream Luxe Finish lipstick is designed to give long-lasting colour and comfortable wear.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>
+                <span>2. Is it matte or glossy?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </summary>
+            <p>
+                It has a smooth creamy finish with a soft shine.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>
+                <span>3. Does it dry out lips?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </summary>
+            <p>
+                No. Its formula helps keep your lips feeling soft and moisturised.
+            </p>
+        </details>
+
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="/html/Cosmetics website/logo.png" alt="logo">
+            <p>
+                3rd Floor, Valasaravakkam,
+                Chennai - 600800.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="">Shop</a>
+            <a href="">New Arrivals</a>
+            <a href="/html/offers.html">Offers</a>
+        </div>
+
+        <div class="footer-support">
+            <h4>Support</h4>
+            <a href="/html/about.html">About</a>
+            <a href="/html/contact.html">Contact</a>
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+        </div>
+
+        <div class="footer-media">
+            <h4>Social Media</h4>
+            <a href="#" class="facebook-icon" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="instagram-icon" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/contact.js"></script>
+    
+
+</body>
+
+</html>

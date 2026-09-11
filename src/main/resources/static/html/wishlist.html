@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/wishlist.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="Cosmetics website/logo.png" alt="Logo">
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                <input type="text" id="searchInput" placeholder="Search lipsticks...">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/html/home.html">Home</a></li>
+
+                <li class="shop-menu">
+                    <a href="#" class="shop-link">Shop</a>
+
+                    <div class="shop-dropdown">
+                        <h3>Category</h3>
+
+                        <a href="/html/eyemakeup.html" class="category-item">
+                            <span>Eye Makeup</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/fragrance.html" class="category-item">
+                            <span>Fragrance</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/haircare.html" class="category-item">
+                            <span>Hair Care</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/lipsticks.html" class="category-item">
+                            <span>Lipsticks</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/nails.html" class="category-item">
+                            <span>Nails</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/skincare.html" class="category-item">
+                            <span>Skincare</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </li>
+
+                <li><a href="/html/offers.html">Offers</a></li>
+                <li><a href="/html/about.html">About</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+            </ul>
+
+            <div class="icons">
+                <div class="icon">
+                    <a href="/html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+
+                <div class="icon">
+                    <a href="/html/wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                </div>
+
+                <div class="user-menu">
+                    <a href="/html/login.html" id="userLink">
+                        <span class="user-icon">
+                        <i class="fa-regular fa-user"></i>
+                        </span>
+
+                        <span id="navbarUsername"></span>
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="wishlist-page">
+
+        <div class="wishlist-header">
+            <h1>My Wishlist</h1>
+            <p>Your favourite beauty products.</p>
+        </div>
+
+        <div id="wishlistItems" class="wishlist-container">
+
+            <!-- Wishlist products will load here -->
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="/html/Cosmetics website/logo.png" alt="logo">
+            <p>
+                3rd Floor, Valasaravakkam,
+                Chennai - 600800.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="">Shop</a>
+            <a href="">New Arrivals</a>
+            <a href="/html/offers.html">Offers</a>
+        </div>
+
+        <div class="footer-support">
+            <h4>Support</h4>
+            <a href="/html/about.html">About</a>
+            <a href="/html/contact.html">Contact</a>
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+        </div>
+
+        <div class="footer-media">
+            <h4>Social Media</h4>
+            <a href="#" class="facebook-icon" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="instagram-icon" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/wishlist.js"></script>
+    
+
+</body>
+
+</html>

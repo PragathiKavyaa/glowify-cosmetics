@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragrance</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/eyemakeup.css">
+</head>
+
+<body data-category="fragrance">
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="/html/Cosmetics website/logo.png" alt="Logo">
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                <input type="text" id="searchInput" placeholder="Search lipsticks...">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/html/home.html">Home</a></li>
+
+                <li class="shop-menu">
+                    <a href="#" class="shop-link">Shop</a>
+
+                    <div class="shop-dropdown">
+                        <h3>Category</h3>
+
+                        <a href="/html/eyemakeup.html" class="category-item">
+                            <span>Eye Makeup</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/fragrance.html" class="category-item">
+                            <span>Fragrance</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/haircare.html" class="category-item">
+                            <span>Hair Care</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/lipsticks.html" class="category-item">
+                            <span>Lipsticks</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/nails.html" class="category-item">
+                            <span>Nails</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/skincare.html" class="category-item">
+                            <span>Skincare</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </li>
+
+                <li><a href="/html/offers.html">Offers</a></li>
+                <li><a href="/html/about.html">About</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+            </ul>
+
+            <div class="icons">
+                <div class="icon">
+                    <a href="/html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+
+                <div class="icon">
+                    <a href="/html/wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                </div>
+
+                <div class="user-menu">
+                    <a href="/html/login.html" id="userLink">
+                        <span class="user-icon">
+                        <i class="fa-regular fa-user"></i>
+                        </span>
+
+                        <span id="navbarUsername"></span>
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="shop-page">
+
+    <!-- LEFT FILTER SIDEBAR -->
+    <aside class="filter-sidebar">
+
+    <div class="filter-title">
+        <i class="fa-solid fa-sliders"></i>
+        <h2>Filter</h2>
+    </div>
+
+    <!-- BRAND -->
+    <div class="filter-group">
+        <button class="filter-heading">
+            <span>Brand</span>
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+
+        <div class="filter-options">
+            <label><input type="checkbox" value="Plix" data-filter="brand"> <span>Plix</span></label>
+            <label><input type="checkbox" value="Edge" data-filter="brand"> <span>Edge</span></label>
+            <label><input type="checkbox" value="Vanesa" data-filter="brand"> <span>Vanesa</span></label>
+            <label><input type="checkbox" value="Denver" data-filter="brand"> <span>Denver</span></label>
+            <label><input type="checkbox" value="Combo" data-filter="brand"> <span>Combo</span></label>
+            <label><input type="checkbox" value="Wild Stone" data-filter="brand"> <span>Wild Stone</span></label>
+            
+        </div>
+    </div>
+
+    <!-- COLOR -->
+    <div class="filter-group">
+        <button class="filter-heading">
+            <span>Color</span>
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+
+        <div class="filter-options">
+            <label><input type="checkbox" value="Baby Pink" data-filter="color"> <span>Baby Pink</span></label>
+            <label><input type="checkbox" value="Rose Pink" data-filter="color"> <span>Rose Pink</span></label>
+            <label><input type="checkbox" value="Fuchsia" data-filter="color"> <span>Fuchsia</span></label>
+            <label><input type="checkbox" value="Peach Nude" data-filter="color"> <span>Peach Nude</span></label>
+            <label><input type="checkbox" value="Berry Red" data-filter="color"> <span>Berry Red</span></label>
+            <label><input type="checkbox" value="Cherry Red" data-filter="color"> <span>Cherry Red</span></label>
+            <label><input type="checkbox" value="Brown Nude" data-filter="color"> <span>Brown Nude</span></label>
+            <label><input type="checkbox" value="Color Pink" data-filter="color"> <span>Coral Pink</span></label>
+        </div>
+    </div>
+
+    <!-- DISCOUNT -->
+    <div class="filter-group">
+        <button class="filter-heading">
+            <span>Discount</span>
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+
+        <div class="filter-options">
+            <label><input type="checkbox" value="10" data-filter="discount"> <span>10% Off</span></label>
+            <label><input type="checkbox" value="20" data-filter="discount"> <span>20% Off</span></label>
+            <label><input type="checkbox" value="30" data-filter="discount"> <span>30% Off</span></label>
+            <label><input type="checkbox" value="40" data-filter="discount"> <span>40% Off</span></label>
+            <label><input type="checkbox" value="50" data-filter="discount"> <span>50% Off</span></label>
+            <label><input type="checkbox" value="Buy 1 Get 1" data-filter="discount"> <span>Buy 1 Get 1</span></label>
+        </div>
+    </div>
+
+    <!-- PRICE -->
+    <div class="filter-group">
+        <button class="filter-heading">
+            <span>Price</span>
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+
+        <div class="filter-options">
+            <label><input type="checkbox" value="0-500" data-filter="price"> <span>Under ₹500</span></label>
+            <label><input type="checkbox" value="500-1000" data-filter="price"> <span>₹500 - ₹1000</span></label>
+            <label><input type="checkbox" value="1000-2000" data-filter="price"> <span>₹1000 - ₹2000</span></label>
+            <label><input type="checkbox" value="2000-3000" data-filter="price"> <span>₹2000 - ₹3000</span></label>
+            <label><input type="checkbox" value="Above ₹3000" data-filter="price"> <span>Above ₹3000</span></label>
+            <label><input type="checkbox" value="Luxury Range" data-filter="price"> <span>Luxury Range</span></label>
+        </div>
+    </div>
+
+</aside>
+
+    <!-- RIGHT PRODUCT AREA -->
+    <section class="products-area">
+
+        <div class="products-top">
+            <h1>Fragrance</h1>
+
+            <div class="sort-dropdown">
+                    <button class="sort-button" id="sortBtn">
+                        <span>Sort By</span>
+                        <i class="fa-solid fa-arrow-down-short-wide"></i>
+                    </button>
+
+                    <div class="sort-menu" id="sortMenu">
+                        <a href="#" data-sort="recommended">Recommended</a>
+                        <a href="#" data-sort="rating">Top Rated</a>
+                        <a href="#" data-sort="low-high">Price: Low-High</a>
+                        <a href="#" data-sort="high-low">Price: High-Low</a>
+                        <a href="#" data-sort="offers">Offers</a>
+                    </div>
+                </div>
+        </div>
+
+        <div class="products-grid" id="products">
+
+            <!-- <div class="product-card" data-price="749" data-rating="4.8" data-offer="20" data-brand="Plix" data-color="Pink">
+                <img src="/html/Cosmetics website/il_fullxfull.7258151788_ai02.avif" alt="PLIX Watermelon Hydrogel Under Eye Patches">
+
+                <h3>PLIX</h3>
+                <p>Perfume Bottle Clipart, Luxury Fragrance Images, 10 WaterColor.</p>
+                <p class="rating"><i class="fa-solid fa-star"></i> 4.8 (214 Reviews)</p>
+                <p>Price: ₹749</p>
+
+                <div class="product-actions">
+                    <button class="cart-button"
+                    data-name="Perfume Bottle Clipart, Luxury Fragrance Images, 10 WaterColor."
+                    data-price="749"
+                    data-image="/html/Cosmetics website/il_fullxfull.7258151788_ai02.avif">Add to cart</button>
+                    <button class="heart-button"
+                    data-name="Perfume Bottle Clipart, Luxury Fragrance Images, 10 WaterColor."
+                    data-price="749"
+                    data-image="/html/Cosmetics website/il_fullxfull.7258151788_ai02.avif"><i class="fa-solid fa-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="product-card" data-price="799" data-rating="4.8" data-offer="20" data-brand="Edge" data-color="Pink">
+                <img src="/html/Cosmetics website/shopping (5).webp" alt="Edge">
+
+                <h3>Edge</h3>
+                <p>Wild Stone Edge Men</p>
+                <p class="rating"><i class="fa-solid fa-star"></i> 4.8 (214 Reviews)</p>
+                <p>Price: ₹799</p>
+
+                <div class="product-actions">
+                    <button class="cart-button"
+                    data-name="Wild Stone Edge Men"
+                    data-price="799"
+                    data-image="/html/Cosmetics website/shopping (5).webp">Add to cart</button>
+                    <button class="heart-button"
+                    data-name="Wild Stone Edge Men"
+                    data-price="799"
+                    data-image="/html/Cosmetics website/shopping (5).webp"><i class = "fa-solid fa-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="product-card" data-price="749" data-rating="4.8" data-offer="20" data-brand="Vanesa" data-color="Pink">
+                <img src="/html/Cosmetics website/shopping (6).webp" alt="Vanesa">
+
+                <h3>Vanesa</h3>
+                <p>Vanesa Desire Perfume Ipremium & Long Lasting</p>
+                <p class="rating"><i class="fa-solid fa-star"></i> 4.8 (214 Reviews)</p>
+                <p>Price: ₹749</p>
+
+                <div class="product-actions">
+                    <button class="cart-button"
+                    data-name="Vanesa Desire Perfume Ipremium & Long Lasting"
+                    data-price="749"
+                    data-image="/html/Cosmetics website/shopping (6).webp">Add to cart</button>
+                    <button class="heart-button"
+                    data-name="Vanesa Desire Perfume Ipremium & Long Lasting"
+                    data-price="749"
+                    data-image="/html/Cosmetics website/shopping (6).webp"><i class="fa-solid fa-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="product-card" data-price="799" data-rating="4.8" data-offer="20" data-brand="Denver" data-color="Pink">
+                <img src="/html/Cosmetics website/shopping (9).webp" alt="Denver">
+
+                <h3>Denver</h3>
+                <p>Denver Hamilton Perfume</p>
+                <p class="rating"><i class="fa-solid fa-star"></i> 4.8 (214 Reviews)</p>
+                <p>Price: ₹799</p>
+
+                <div class="product-actions">
+                    <button class="cart-button"
+                    data-name="Denver Hamilton Perfume"
+                    data-price="799"
+                    data-image="/html/Cosmetics website/shopping (9).webp">Add to cart</button>
+                    <button class="heart-button"
+                    data-name="Denver Hamilton Perfume"
+                    data-price="799"
+                    data-image="/html/Cosmetics website/shopping (9).webp"><i class="fa-solid fa-heart"></i></button>
+                </div>
+            </div>
+
+              <div class="product-card" data-price="849" data-rating="4.8" data-offer="20" data-brand="Combo" data-color="Pink">
+                <img src="/html/Cosmetics website/shopping (8).webp" alt="Combo">
+
+                <h3>Combo</h3>
+                <p>Beardo Best Seller Perfumes Combo</p>
+                <p class="rating"><i class="fa-solid fa-star"></i> 4.8 (214 Reviews)</p>
+                <p>Price: ₹849</p>
+
+                <div class="product-actions">
+                    <button class="cart-button"
+                    data-name="Beardo Best Seller Perfumes Combo"
+                    data-price="849"
+                    data-image="/html/Cosmetics website/shopping (8).webp">Add to cart</button>
+                    <button class="heart-button"
+                    data-name="Beardo Best Seller Perfumes Combo"
+                    data-price="849"
+                    data-image="/html/Cosmetics website/shopping (8).webp"><i class="fa-solid fa-heart"></i></button>
+                </div>
+            </div>
+
+            <div class="product-card" data-price="799" data-rating="4.8" data-offer="20" data-brand="Wild Stone" data-color="Pink">
+                <img src="/html/Cosmetics website/shopping (7).webp" alt="Velvet Intense">
+
+                <h3>Wild Stone</h3>
+                <p>Wild Stone Men's Ultra Sensual Perfume</p>
+                <p class="rating"><i class="fa-solid fa-star"></i> 4.8 (214 Reviews)</p>
+                <p>Price: ₹799</p>
+
+                <div class="product-actions">
+                    <button class="cart-button"
+                    data-name="Wild Stone Men's Ultra Sensual Perfume"
+                    data-price="799"
+                    data-image="/html/Cosmetics website/shopping (7).webp">Add to cart</button>
+                    <button class="heart-button"
+                    data-name="Wild Stone Men's Ultra Sensual Perfume"
+                    data-price="799"
+                    data-image="/html/Cosmetics website/shopping (7).webp"><i class="fa-solid fa-heart"></i></button>
+                </div>
+            </div> -->
+
+        </div>
+
+        <section class="view-all">
+            <button class="view"> View all</button>
+        </section>
+
+        <section class="beauty">
+            <div class="beauty-circle">
+                <h3>Join Our Beauty Circle</h3>
+                <p>Be the first to know about new arrivals, exclusive discounts, and special flash sales.  </p>
+                <div class="form">
+                        <input type="email" id="subscriberEmail" name="email" placeholder="Enter your mail">
+                        <button class="register" type="submit" id="registerBtn">Register</button>
+                </div>
+            </div>
+
+            <div class="beauty-img">
+                <img src="/html/Cosmetics website/ChatGPT_Image_Feb_23__2026__12_36_30_PM-removebg-preview.png" alt="beauty picture">
+            </div>
+        </section>
+    </section>
+</main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="/html/Cosmetics website/logo.png" alt="logo">
+            <p>
+                3rd Floor, Valasaravakkam,
+                Chennai - 600800.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="">Shop</a>
+            <a href="">New Arrivals</a>
+            <a href="/html/offers.html">Offers</a>
+        </div>
+
+        <div class="footer-support">
+            <h4>Support</h4>
+            <a href="/html/about.html">About</a>
+            <a href="/html/contact.html">Contact</a>
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+        </div>
+
+        <div class="footer-media">
+            <h4>Social Media</h4>
+            <a href="#" class="facebook-icon" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="instagram-icon" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/fragrance.js"></script>
+    
+
+</body>
+
+</html>

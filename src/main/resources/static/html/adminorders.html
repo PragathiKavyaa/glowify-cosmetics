@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glowify Admin Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/adminorders.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <nav class="admin-navbar">
+
+            <div class="logo">
+
+                <img src="/html/Cosmetics website/logo.png">
+
+                <h2>Glowify Admin</h2>
+
+            </div>
+
+            <ul>
+
+                <li><a href="#">Dashboard</a></li>
+
+                <li><a href="#products">Products</a></li>
+
+                <li><a href="#orders">Orders</a></li>
+
+                <li><a href="#offers">Offers</a></li>
+
+                <li><a href="#inventory">Inventory</a></li>
+
+                <li><a href="#messages">Messages</a></li>
+
+                <li><a href="#subscribers">Subscribers</a></li>
+
+                <li><a href="#reports">Reports</a></li>
+
+            </ul>
+
+            <div class="admin-profile">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+        <!-- Dashboard -->
+
+        <section class="dashboard-cards">
+
+            <div class="card">
+
+                <h2 id="totalProducts">0</h2>
+
+                <p>Total Products</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2 id="totalOrders">0</h2>
+
+                <p>Total Orders</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2 id="totalRevenue">₹0</h2>
+
+                <p>Total Revenue</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2 id="lowStock">0</h2>
+
+                <p>Low Stock Products</p>
+
+            </div>
+
+        </section>
+
+        <!-- Product Management -->
+
+        <!-- ================= PRODUCT MANAGEMENT ================= -->
+
+        <section class="admin-section" id="products">
+
+            <div class="section-header">
+
+                <h2>Product Management</h2>
+
+                <button id="addProduct" class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Product
+                </button>
+
+            </div>
+
+            <table class="product-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Brand</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Discount</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="productTableBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Orders -->
+
+        <section class="admin-section" id="orders">
+
+            <h2>Order Management</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Customer</th>
+
+                        <th>Total</th>
+
+                        <th>Status</th>
+
+                        <th>Update</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="ordersBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Cancellation Requests -->
+        <!-- Cancellation Requests -->
+
+        <section class="admin-section" id="cancelRequests">
+
+            <h2>Cancellation Requests</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="cancelTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Customer Messages -->
+
+        <section class="admin-section" id="messages">
+
+            <h2>Customer Messages</h2>
+
+            <div class="messages" id="messagesContainer">
+
+            </div>
+
+        </section>
+
+        <!-- Notifications -->
+
+        <section class="admin-section">
+
+            <h2>Notifications</h2>
+
+            <div class="notifications">
+
+                <ul id="notificationList">
+
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- Inventory -->
+
+        <section class="admin-section" id="inventory">
+
+            <h2>Inventory Management</h2>
+
+            <table class="inventory-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Stock</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="inventoryBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section class="admin-section" id="offers">
+
+            <div class="section-header">
+                <h2>Offer Management</h2>
+
+                <button class="add-btn" onclick="openOfferModal()">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Offer
+                </button>
+            </div>
+
+            <table class="product-table">
+
+                <thead>
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Product ID</th>
+                        <th>Offer</th>
+                        <th>Type</th>
+                        <th>Discount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+
+                <tbody id="offerTableBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section id="contactMessages">
+
+            <h2>Contact Messages</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Subject</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+
+                <tbody id="contactMessageBody"></tbody>
+
+            </table>
+
+        </section>
+
+        <!-- ================= SUBSCRIBERS ================= -->
+
+<section class="admin-section" id="subscribers">
+
+    <div class="section-header">
+
+        <h2>Inner Circle Subscribers</h2>
+
+    </div>
+
+    <table class="product-table">
+
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="subscriberTableBody">
+
+        </tbody>
+
+    </table>
+
+</section>
+
+        <div class="modal" id="addProductModal">
+
+            <div class="modal-content">
+
+                <h2>Add Product</h2>
+
+                <div class="form-grid">
+
+                    <input type="text" id="productName" placeholder="Product Name">
+
+                    <input id="brand" placeholder="Brand">
+
+                    <select id="category">
+                        <option value="">Select Category</option>
+                        <option value="eye-makeup">Eye Makeup</option>
+                        <option value="fragrance">Fragrance</option>
+                        <option value="skincare">Skincare</option>
+                        <option value="haircare">Haircare</option>
+                        <option value="lipsticks">Lipsticks</option>
+                        <option value="nails">Nails</option>
+                    </select>
+
+                    <input type="number" id="price" placeholder="Price">
+
+                    <input type="number" id="stock" placeholder="Stock">
+
+                    <input type="number" id="discountValue" placeholder="Discount %">
+
+                    <input id="rating" type="number" step="0.1" placeholder="Rating">
+
+                    <input id="reviewCount" type="number" placeholder="Reviews">
+
+                    <input id="badge" placeholder="Badge">
+
+                    <input type="text" id="image" placeholder="Image URL">
+
+                </div>
+
+                <input type="text" id="altText" placeholder="Alt Text">
+
+                <textarea id="description" placeholder="Description"></textarea>
+
+                <div class="modal-footer">
+
+                    <button class="save-btn" onclick="saveProduct()">
+                        Save
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('addProductModal')">
+                        Close
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= EDIT PRODUCT MODAL ================= -->
+
+        <div class="modal" id="editProductModal">
+
+            <div class="modal-content">
+
+                <h2>Edit Product</h2>
+
+                <input type="hidden" id="editId">
+
+                <div class="form-grid">
+
+                    <input type="text" id="editName" placeholder="Product Name">
+
+                    <input type="text" id="editBrand" placeholder="Brand">
+
+                    <select id="editCategory">
+                        <option value="eye-makeup">Eye Makeup</option>
+                        <option value="fragrance">Fragrance</option>
+                        <option value="haircare">Haircare</option>
+                        <option value="lipsticks">Lipsticks</option>
+                        <option value="nails">Nails</option>
+                        <option value="skincare">Skincare</option>
+                    </select>
+
+                    <input type="number" id="editPrice" placeholder="Price">
+
+                    <input type="number" id="editStock" placeholder="Stock">
+
+                    <input type="number" id="editDiscount" placeholder="Discount">
+
+                    <input type="number" id="editRating" placeholder="Rating" min="0" max="5" step="0.1">
+
+                    <input type="number" id="editReviewCount" placeholder="Review Count">
+
+                    <input type="text" id="editImage" placeholder="Image URL">
+
+                    <input type="text" id="editAlt" placeholder="Alt Text">
+
+                </div>
+
+                <textarea id="editDescription" placeholder="Description"></textarea>
+
+                <div class="modal-footer">
+
+                    <button class="save-btn" onclick="updateProduct()">
+                        Update Product
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('editProductModal')">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal" id="stockModal">
+
+            <div class="modal-content">
+
+                <h2>Update Stock</h2>
+
+                <input id="stockProductId" placeholder="Product ID">
+
+                <input id="newStock" placeholder="New Stock">
+
+                <div class="modal-footer">
+                    <button class="save-btn" onclick="updateStock()">Update</button>
+                    <button class="close-btn" onclick="closeModal('stockModal')">Close</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal" id="priceModal">
+
+            <div class="modal-content">
+
+                <h2>Change Price</h2>
+
+                <input id="priceProductId" placeholder="Product ID">
+
+                <input id="newPrice" placeholder="New Price">
+
+                <div class="modal-footer">
+                    <button class="save-btn" onclick="changePrice()">Update</button>
+                    <button class="close-btn" onclick="closeModal('priceModal')">Close</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal" id="discountModal">
+
+            <div class="modal-content">
+
+                <h2>Add Discount</h2>
+
+                <input id="discountProductId" placeholder="Product ID">
+
+                <input id="discountPercent" placeholder="Discount %">
+
+                <div class="modal-footer">
+                    <button class="save-btn" onclick="addDiscount()">Save</button>
+                    <button class="close-btn" onclick="closeModal('discountModal')">Close</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal" id="offerModal">
+
+    <div class="modal-content">
+
+        <h2>Add Offer</h2>
+
+        <input type="hidden" id="offerId">
+
+        <input type="number"
+               id="offerProductId"
+               placeholder="Product ID">
+
+        <input type="text"
+               id="offerTitle"
+               placeholder="Offer Title">
+
+        <select id="offerType">
+
+            <option value="PERCENTAGE">
+                Percentage Discount
+            </option>
+
+            <option value="BUY_ONE_GET_ONE">
+                Buy One Get One
+            </option>
+
+        </select>
+
+        <input type="number"
+               id="offerDiscountPercent"
+               placeholder="Discount %">
+
+        <input type="number"
+               id="offerPrice"
+               placeholder="Offer Price">
+
+        <input type="number"
+               id="buyQuantity"
+               placeholder="Buy Quantity">
+
+        <input type="number"
+               id="freeQuantity"
+               placeholder="Free Quantity">
+
+        <input type="date"
+               id="startDate">
+
+        <input type="date"
+               id="endDate">
+
+        <label>
+
+            <input type="checkbox"
+                   id="offerActive"
+                   checked>
+
+            Active
+
+        </label>
+
+        <div class="modal-footer">
+
+            <button class="save-btn"
+                    onclick="saveOffer()">
+                Save
+            </button>
+
+            <button class="close-btn"
+                    onclick="closeModal('offerModal')">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Glowify Cosmetics Admin Dashboard
+
+    </footer>
+
+    <script src="/js/adminorders.js"></script>
+
+</body>
+
+</html>

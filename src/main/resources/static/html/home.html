@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="Cosmetics website/logo.png" alt="Logo">
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                <input type="text" id="searchInput" placeholder="Search lipsticks...">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/html/home.html">Home</a></li>
+
+                <li class="shop-menu">
+                    <a href="#" class="shop-link">Shop</a>
+
+                    <div class="shop-dropdown">
+                        <h3>Category</h3>
+
+                        <a href="/html/eyemakeup.html" class="category-item">
+                            <span>Eye Makeup</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/fragrance.html" class="category-item">
+                            <span>Fragrance</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/haircare.html" class="category-item">
+                            <span>Hair Care</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/lipsticks.html" class="category-item">
+                            <span>Lipsticks</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/nails.html" class="category-item">
+                            <span>Nails</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="/html/skincare.html" class="category-item">
+                            <span>Skincare</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </li>
+
+                <li><a href="/html/offers.html">Offers</a></li>
+                <li><a href="/html/about.html">About</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+            </ul>
+
+            <div class="icons">
+                <div class="icon">
+                    <a href="/html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+
+                <div class="icon">
+                    <a href="/html/wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                </div>
+
+                <div class="user-menu">
+                    <a href="/html/login.html" id="userLink">
+                        <span class="user-icon">
+                        <i class="fa-regular fa-user"></i>
+                        </span>
+
+                        <span id="navbarUsername"></span>
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <div class="slider">
+
+            <!-- Banner 1 -->
+            <div class="slide active">
+                <img src="Cosmetics website/banner1.png" alt="Banner 1">
+
+                <a href="/html/offers.html" class="shop-btn left-btn">
+                    Shop Now
+                </a>
+            </div>
+
+            <!-- Banner 2 -->
+            <div class="slide">
+                <img src="Cosmetics website/banner2.png" alt="Banner 2">
+
+                <a href="/html/offers.html" class="shop-btn left-btn">
+                    Shop Now
+                </a>
+            </div>
+
+            <!-- Banner 3 -->
+            <div class="slide">
+                <img src="Cosmetics website/banner3.png" alt="Banner 3">
+
+                <a href="/html/offers.html" class="shop-btn right-btn">
+                    Shop Now
+                </a>
+            </div>
+
+        </div>
+
+        <button class="arrow left">
+            <i class="fa-solid fa-angle-left"></i>
+        </button>
+
+        <button class="arrow right">
+            <i class="fa-solid fa-angle-right"></i>
+        </button>
+
+    </section>
+
+    <section class="about-section">
+
+        <h2 class="section-title">Where Luxury Meets Skin Science</h2>
+
+        <div class="about-container">
+
+            <div class="about-images">
+
+                <img src="/html/Cosmetics website/transist1.jpg" class="img img1">
+
+                <img src="/html/Cosmetics website/transist2.webp" class="img img2">
+
+            </div>
+
+            <div class="about-content">
+
+                <p>
+                    At Glowify, we believe oily skin deserves premium care.
+                    Our dermatologist-tested formula blends advanced
+                    ingredients with elegant skincare innovation, giving
+                    you confidence without compromise.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ INGREDIENTS SECTION ================-->
+
+    <section class="ingredients-section">
+
+        <h2 class="ingredients-title">
+            Powered By Performance Ingredients
+        </h2>
+
+        <div class="slider-container">
+
+            <div class="ingredients-slider">
+
+                <div class="ingredient-card">
+
+                    <img src="/html/Cosmetics website/p1.png" alt="Tea Tree">
+
+                    <div class="content">
+                        <h3>Tea Tree Extract</h3>
+
+                        <p>
+                            Helps reduce acne and calm irritation while keeping skin healthy.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="ingredient-card">
+
+                    <img src="/html/Cosmetics website/p2.png" alt="Charcoal">
+
+                    <div class="content">
+                        <h3>Charcoal Complex</h3>
+
+                        <p>
+                            Deep cleans pores and removes excess oil naturally.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ingredient-card">
+
+                    <img src="/html/Cosmetics website/p3.png" alt="Hyaluronic">
+
+                    <div class="content">
+                        <h3>Hyaluronic Acid</h3>
+
+                        <p>
+                            Provides lightweight hydration throughout the day.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ingredient-card">
+
+                    <img src="/html/Cosmetics website/p4.png" alt="Niacinamide">
+
+                    <div class="content">
+
+                        <h3>Niacinamide</h3>
+
+                        <p>
+                            Controls excess oil and visibly reduces pores.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- ================= FEATURED PRODUCTS ================= -->
+
+<section class="featured-products">
+
+    <h2 class="featured-title">Featured Products</h2>
+
+    <!-- Products will be loaded dynamically from all 6 categories -->
+    <div class="cart-section" id="featuredProducts">
+
+        <!-- Loading message -->
+        <div class="featured-loading">
+            <p>Loading featured products...</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= END FEATURED PRODUCTS ================= -->
+
+    <section class="categories">
+        <div class="category-heading">
+            <h2>Top Categories</h2>
+        </div>
+
+        <div class="category-container">
+
+            <button class="arrow left">&#10094;</button>
+
+            <div class="category-wrapper">
+
+                <div class="category">
+
+                    <div class="cat">
+                        <div class="image-box">
+                            <img src="/html/Cosmetics website/c1.png" alt="lipsticks" class="front">
+                            <img src="/html/Cosmetics website/c1.png" alt="lipsticks" class="back">
+                        </div>
+                        <h4>Lipsticks</h4>
+                        <p>Vibrant & Bold Color</p>
+                        <a href="/html/lipsticks.html" class="shop">Shop Now</a>
+                    </div>
+
+                    <div class="cat">
+                        <div class="image-box">
+                            <img src="/html/Cosmetics website/c2.png" alt="Skincare" class="front">
+                            <img src="/html/Cosmetics website/c2.png" alt="Skincare" class="back">
+                        </div>
+                        <h4>Skincare</h4>
+                        <p>Hydrating Essentials</p>
+                        <a href="/html/skincare.html" class="shop">Shop Now</a>
+                    </div>
+
+                    <div class="cat">
+                        <div class="image-box">
+                            <img src="/html/Cosmetics website/c3.png" alt="Eye Makeup" class="front">
+                            <img src="/html/Cosmetics website/c3.png" alt="Eye Makeup" class="back">
+                        </div>
+                        <h4>Eye Makeup</h4>
+                        <p>Shadows & Liners</p>
+                        <a href="/html/eyemakeup.html" class="shop">Shop Now</a>
+                    </div>
+
+                    <div class="cat">
+                        <div class="image-box">
+                            <img src="/html/Cosmetics website/c4.png" alt="Hair Care" class="front">
+                            <img src="/html/Cosmetics website/c4.png" alt="Hair Care" class="back">
+                        </div>
+                        <h4>Hair Care</h4>
+                        <p>Shampoos & Oils</p>
+                        <a href="/html/haircare.html" class="shop">Shop Now</a>
+                    </div>
+
+                    <div class="cat">
+                        <div class="image-box">
+                            <img src="/html/Cosmetics website/c5.png" alt="Fragrance" class="front">
+                            <img src="/html/Cosmetics website/c5.png" alt="Fragrance" class="back">
+                        </div>
+                        <h4>Fragrance</h4>
+                        <p>Luxurious Scents</p>
+                        <a href="/html/fragrance.html" class="shop">Shop Now</a>
+                    </div>
+
+                    <div class="cat">
+                        <div class="image-box">
+                            <img src="/html/Cosmetics website/c6.png" alt="Nails" class="front">
+                            <img src="/html/Cosmetics website/c6.png" alt="Nails" class="back">
+                        </div>
+                        <h4>Nails</h4>
+                        <p>Polish & Manicure</p>
+                        <a href="/html/nails.html" class="shop">Shop Now</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <button class="arrow right">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="beauty-features">
+        <div class="beauty-feature-container">
+
+            <div class="beauty-image-side">
+                <div class="pink-flower-bg"></div>
+
+                <img src="/html/Cosmetics website/ChatGPT Image Feb 23, 2026, 11_02_27 AM.png"
+                    alt="Woman holding skincare product" class="beauty-girl">
+            </div>
+
+            <div class="beauty-feature-list">
+
+                <button class="beauty-feature" type="button">
+                    <span class="feature-number">01</span>
+                    <span class="feature-title">Clean Beauty Promise</span>
+                </button>
+
+                <button class="beauty-feature" type="button">
+                    <span class="feature-number">02</span>
+                    <span class="feature-title">Proven Results</span>
+                </button>
+
+                <button class="beauty-feature" type="button">
+                    <span class="feature-number">03</span>
+                    <span class="feature-title">Expert Formulated</span>
+                </button>
+
+                <button class="beauty-feature" type="button">
+                    <span class="feature-number">04</span>
+                    <span class="feature-title">Sustainable Beauty</span>
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="customers">
+        <div class="customer-title">
+            <h4>Happy Customers</h4>
+        </div>
+
+        <div class="feedback-section">
+
+            <button class="feedback-left">&#10094;</button>
+
+            <div class="feedback">
+                <div class="feedback1">
+                    <img src="/html/Cosmetics website/cute-profile-pic-for-girls-hd.webp" alt="priya">
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <blockquote>"Finally a premium cream that actually controls my oil without making my skin dry.
+                        My face stays matte even in humid weather!"
+                        <span>-Priya S., Chennai</span>
+                    </blockquote>
+                </div>
+
+                <div class="feedback1">
+                    <img src="/html/Cosmetics website/desktop-wallpaper-beautiful-stylish-girl-for-profile-girl-profile.jpg"
+                        alt="priya">
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <blockquote>"I have very oily, acne prone skin and Glowify changed everything. It feels lightweight
+                        and absorb instantly!"
+                        <span>-Ananya R., Bangalore</span>
+                    </blockquote>
+                </div>
+            </div>
+
+            <button class="feedback-right">&#10095;</button>
+
+        </div>
+    </section>
+
+    <section class="join">
+        <div class="inner-circle">
+
+            <h5>Join The Inner Circle</h5>
+            <p>
+                Sign up to receive early access to new launches, exclusive offers and skincare tips.
+            </p>
+            <div class="form">
+                <input type="email" id="subscriberEmail" name="email" placeholder="Enter your mail">
+                <button class="register" type="submit" id="registerBtn">Register</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="flash-sale">
+        <div class="flash">
+            <div class="flash1">
+                <img src="/html/Cosmetics website/ChatGPT Image Feb 23, 2026, 10_39_30 AM.png" alt="cream"
+                    class="cream">
+                <div class="sale">
+                    <blockquote>"Glow Confidently every Day"</blockquote>
+                    <a href="/html/offers.html" class="shop-now">
+                        <span>Shop Now</span>
+                    </a>
+                </div>
+                <img src="/html/Cosmetics website/ChatGPT_Image_Feb_19__2026__12_29_17_PM-removebg-preview.png"
+                    alt="cosmetics" class="cosmetics">
+            </div>
+            <div class="flash2">
+                <p>Flash Sale 50% Off</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="/html/Cosmetics website/logo.png" alt="logo">
+            <p>
+                3rd Floor, Valasaravakkam,
+                Chennai - 600800.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="">Shop</a>
+            <a href="">New Arrivals</a>
+            <a href="/html/offers.html">Offers</a>
+        </div>
+
+        <div class="footer-support">
+            <h4>Support</h4>
+            <a href="/html/about.html">About</a>
+            <a href="/html/contact.html">Contact</a>
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+        </div>
+
+        <div class="footer-media">
+            <h4>Social Media</h4>
+            <a href="#" class="facebook-icon" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="instagram-icon" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/home.js"></script>
+    
+
+</body>
+
+</html>
