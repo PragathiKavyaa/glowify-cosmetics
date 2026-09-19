@@ -9,6 +9,7 @@ import com.example.cosmetics.repository.ProductRepository;
 import com.example.cosmetics.repository.SubscriberRepository;
 import com.example.cosmetics.service.EmailService;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
