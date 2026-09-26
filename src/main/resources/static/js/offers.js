@@ -34,7 +34,7 @@ if (searchInput && clearSearch && searchBox) {
     });
 }
 
-const API="http://localhost:8080/api/offers/active";
+const API="/api/offers/active";
 
 async function loadOffers(){
 
@@ -146,7 +146,7 @@ return;
 
 await fetch(
 
-`http://localhost:8080/api/offers/cart/${offerId}?userId=${userId}`,
+`/api/offers/cart/${offerId}?userId=${userId}`,
 
 {
 

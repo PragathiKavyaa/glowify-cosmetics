@@ -66,7 +66,7 @@ async function performSearch(){
     if(keyword==="") return;
 
     const response = await fetch(
-    `http://localhost:8080/products/search?keyword=${encodeURIComponent(keyword)}`
+    `/products/search?keyword=${encodeURIComponent(keyword)}`
 );
 
     const products = await response.json();

@@ -514,7 +514,7 @@ async function saveProduct() {
         alt: document.getElementById("altText").value
     };
 
-    const response = await fetch("http://localhost:8080/products", {
+    const response = await fetch("/products", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -624,7 +624,7 @@ async function loadProducts() {
 
     try {
 
-        const response = await fetch("http://localhost:8080/products");
+        const response = await fetch("/products");
 
         const products = await response.json();
 
@@ -704,7 +704,7 @@ async function deleteProduct(id) {
 
     const response = await fetch(
 
-        `http://localhost:8080/products/${id}`,
+        `/products/${id}`,
 
         {
 
@@ -732,7 +732,7 @@ async function editProduct(id) {
 
     try {
 
-        const response = await fetch(`http://localhost:8080/products/${id}`);
+        const response = await fetch(`/products/${id}`);
 
         const product = await response.json();
 
@@ -789,7 +789,7 @@ async function updateProduct() {
 
     };
 
-    const response = await fetch(`http://localhost:8080/products/${id}`, {
+    const response = await fetch(`/products/${id}`, {
 
         method: "PUT",
 
@@ -829,7 +829,7 @@ async function loadInventory() {
 
     try {
 
-        const response = await fetch("http://localhost:8080/products");
+        const response = await fetch("/products");
 
         const products = await response.json();
 
@@ -1138,7 +1138,7 @@ async function loadContactMessages() {
 
 // }
 
-const OFFER_API = "http://localhost:8080/api/offers";
+const OFFER_API = "/api/offers";
 
 
 async function loadOffers() {

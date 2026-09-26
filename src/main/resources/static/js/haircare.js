@@ -214,7 +214,7 @@ async function addToCart(productId, name, image, price) {
 
     try {
 
-        const response = await fetch("http://localhost:8080/api/cart", {
+        const response = await fetch("/api/cart", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -259,7 +259,7 @@ async function addToWishlist(name, image, price) {
 
     };
 
-    const response = await fetch("http://localhost:8080/wishlist", {
+    const response = await fetch("/wishlist", {
 
         method: "POST",
 
@@ -293,7 +293,7 @@ async function loadProducts() {
     const category = document.body.dataset.category;
 
     const response = await fetch(
-        `http://localhost:8080/products/category/${encodeURIComponent(category)}`
+        `/products/category/${encodeURIComponent(category)}`
     );
 
     if (!response.ok) {
@@ -381,7 +381,7 @@ async function performSearch(){
     if(keyword==="") return;
 
     const response = await fetch(
-    `http://localhost:8080/products/search?keyword=${encodeURIComponent(keyword)}`
+    `/products/search?keyword=${encodeURIComponent(keyword)}`
 );
 
     const products = await response.json();
