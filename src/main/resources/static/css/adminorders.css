@@ -277,6 +277,42 @@ header{
     font-weight:600;
 }
 
+/* Product Image Upload */
+.image-label {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+input[type="file"]::file-selector-button {
+    padding: 8px 14px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #e91e63;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+    opacity: 0.9;
+}
+
 /* ===========================
    BUTTONS
 =========================== */

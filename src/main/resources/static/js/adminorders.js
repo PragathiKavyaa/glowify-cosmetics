@@ -487,79 +487,194 @@ function openOfferModal() {
 
 async function saveProduct() {
 
-    const product = {
+    try {
 
-        name: document.getElementById("productName").value,
+        const imageFile =
+            document.getElementById("image").files[0];
 
-        brand: document.getElementById("brand").value,
+        if (!imageFile) {
 
-        description: document.getElementById("description").value,
+            alert("Please select a product image.");
 
-        category: document.getElementById("category").value,
+            return;
+        }
 
-        price: Number(document.getElementById("price").value),
+        // ===============================
+        // STEP 1: Upload Image
+        // ===============================
 
-        stock: Number(document.getElementById("stock").value),
+        const formData = new FormData();
 
-        discount: Number(document.getElementById("discountValue").value),
+        formData.append("image", imageFile);
 
-        rating: Number(document.getElementById("rating").value),
+        const imageResponse =
+            await fetch("/products/upload-image", {
 
-        reviewCount: Number(document.getElementById("reviewCount").value),
+                method: "POST",
 
-        badge: document.getElementById("badge").value,
+                body: formData
 
-        image: document.getElementById("image").value,
+            });
 
-        alt: document.getElementById("altText").value
-    };
+        if (!imageResponse.ok) {
 
-    const response = await fetch("/products", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(product)
-    });
+            const errorText =
+                await imageResponse.text();
 
-    if (response.ok) {
-        alert("Product Added Successfully");
+            console.error(
+                "Image upload failed:",
+                errorText
+            );
 
-        closeModal("addProductModal");
+            alert("Failed to upload product image.");
 
-        loadProducts();
+            return;
+        }
 
-        loadInventory();
+        const imageUrl =
+            await imageResponse.text();
 
-        loadDashboard();
+        console.log(
+            "Uploaded Image URL:",
+            imageUrl
+        );
+
+        // ===============================
+        // STEP 2: Create Product
+        // ===============================
+
+        const product = {
+
+            name:
+                document.getElementById(
+                    "productName"
+                ).value,
+
+            brand:
+                document.getElementById(
+                    "brand"
+                ).value,
+
+            description:
+                document.getElementById(
+                    "description"
+                ).value,
+
+            category:
+                document.getElementById(
+                    "category"
+                ).value,
+
+            price:
+                Number(
+                    document.getElementById(
+                        "price"
+                    ).value
+                ),
+
+            stock:
+                Number(
+                    document.getElementById(
+                        "stock"
+                    ).value
+                ),
+
+            discount:
+                Number(
+                    document.getElementById(
+                        "discountValue"
+                    ).value
+                ),
+
+            rating:
+                Number(
+                    document.getElementById(
+                        "rating"
+                    ).value
+                ),
+
+            reviewCount:
+                Number(
+                    document.getElementById(
+                        "reviewCount"
+                    ).value
+                ),
+
+            badge:
+                document.getElementById(
+                    "badge"
+                ).value,
+
+            image:
+                imageUrl,
+
+            alt:
+                document.getElementById(
+                    "altText"
+                ).value
+        };
+
+        // ===============================
+        // STEP 3: Save Product
+        // ===============================
+
+        const response =
+            await fetch("/products", {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type":
+                        "application/json"
+                },
+
+                body:
+                    JSON.stringify(product)
+
+            });
+
+        if (response.ok) {
+
+            alert(
+                "Product and image added successfully!"
+            );
+
+            closeModal(
+                "addProductModal"
+            );
+
+            loadProducts();
+
+            loadInventory();
+
+            loadDashboard();
+
+        } else {
+
+            const errorText =
+                await response.text();
+
+            console.error(
+                "Product save failed:",
+                errorText
+            );
+
+            alert(
+                "Image uploaded, but product could not be saved."
+            );
+        }
+
+    } catch (error) {
+
+        console.error(
+            "Save Product Error:",
+            error
+        );
+
+        alert(
+            "Error adding product."
+        );
     }
-    else {
-        alert("Failed to Add Product");
-    }
-}
-
-async function updateStock() {
-
-    const id = document.getElementById("stockProductId").value;
-
-    const stock = document.getElementById("newStock").value;
-
-    await fetch(`/api/admin/products/${id}/stock?stock=${stock}`, {
-
-        method: "PUT"
-
-    });
-
-    alert("Stock Updated");
-
-    closeModal("stockModal");
-
-    loadProducts();
-
-    loadInventory();
-
-    loadDashboard();
-
 }
 
 async function changePrice() {
